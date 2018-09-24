@@ -22,4 +22,5 @@ Couple of sites for best coding and design
 	<li>https://css-tricks.com/introduction-web-audio-api/</li>
 	<li>https://gist.github.com/domenic/3889970</li>
 	<li>https://stackoverflow.com/questions/8018760/jquery-difference-between-click-and-onclick</li>
+	<li>http://rogerdudler.github.io/git-guide/</li>
 </ul>
