@@ -1,26 +1,50 @@
 # MustRead
-Couple of sites for best coding and design
 
-<ul>
-	<li>http://codeguide.co/#html</li>
-	<li>http://codeitdown.com/responsive-font-size-css/</li>
-	<li>https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL</li>
-	<li>https://www.youtube.com/watch?v=rlnhiwN8AnU</li>
-	<li>https://hackhands.com/how-to-get-started-on-the-mean-stack/</li>
-	<li>http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/</li>
-	<li>http://vanseodesign.com/css/vertical-centering/</li>
-	<li>https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background</li>
-	<li>http://codeguide.co/#html</li>
-	<li>http://learnlayout.com/position.html</li>
-	<li>https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index</li>
-	<li>http://maxdesign.com.au/articles/inline/</li>
-	<li>https://stackoverflow.com/questions/15649244/responsive-font-size</li>
-	<li>https://tympanus.net/codrops/css_reference/display/</li>
-	<li>https://tableless.com.br/transition-e-animation/</li>
-	<li>https://www.sitepoint.com/jsonp-examples/</li>
-	<li>https://github.com/getify/You-Dont-Know-JS</li>
-	<li>https://css-tricks.com/introduction-web-audio-api/</li>
-	<li>https://gist.github.com/domenic/3889970</li>
-	<li>https://stackoverflow.com/questions/8018760/jquery-difference-between-click-and-onclick</li>
-	<li>http://rogerdudler.github.io/git-guide/</li>
-</ul>
+Couple of good resources for several subjects regarding software
+
+## Flexbox
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background
+
+## Code standards
+
+http://codeguide.co/#html
+
+## Environmental variables (NODE)
+
+https://codeburst.io/how-to-easily-set-up-node-environment-variables-in-your-js-application-d06740f9b9bd
+
+## GIT
+
+http://rogerdudler.github.io/git-guide/
+
+## Built-in methods (JS)
+
+https://codeburst.io/array-methods-explained-filter-vs-map-vs-reduce-vs-foreach-ea3127c6d319
+
+## Promisses (JS)
+
+https://medium.com/quick-code/javascript-promises-in-twenty-minutes-3aac5b65b887
+https://medium.freecodecamp.org/promises-in-javascript-explained-277b98850de
+https://itnext.io/javascript-promises-with-node-js-e8ca827e0ea3
+https://gist.github.com/domenic/3889970
+
+## Prototypal Inheritance
+
+https://codeburst.io/master-javascript-prototypes-inheritance-d0a9a5a75c4e
+
+## HTTP
+
+https://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html
+
+## Javascript
+
+https://github.com/getify/You-Dont-Know-JS
+
+## Spread Operator (JS)
+
+https://codeburst.io/a-simple-guide-to-destructuring-and-es6-spread-operator-e02212af5831
+
+## This (JS)
+
+http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it
