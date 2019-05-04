@@ -14,13 +14,24 @@ http://codeguide.co/#html
 
 https://codeburst.io/how-to-easily-set-up-node-environment-variables-in-your-js-application-d06740f9b9bd
 
+## Express (NODE)
+
+https://medium.com/@adamzerner/how-bodyparser-works-247897a93b90
+
 ## GIT
 
 http://rogerdudler.github.io/git-guide/
+https://marklodato.github.io/visual-git-guide/index-en.html
 
-## Built-in methods (JS)
+## Methods (JS)
 
 https://codeburst.io/array-methods-explained-filter-vs-map-vs-reduce-vs-foreach-ea3127c6d319
+
+## Node.js
+
+https://jsblog.insiderattack.net/event-loop-and-the-big-picture-nodejs-event-loop-part-1-1cb67a182810
+
+https://jsblog.insiderattack.net/timers-immediates-and-process-nexttick-nodejs-event-loop-part-2-2c53fd511bb3
 
 ## Promisses (JS)
 
@@ -40,6 +51,7 @@ https://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html
 ## Javascript
 
 https://github.com/getify/You-Dont-Know-JS
+https://javascript.info
 
 ## Spread Operator (JS)
 
