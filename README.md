@@ -21,6 +21,7 @@ https://medium.com/@adamzerner/how-bodyparser-works-247897a93b90
 ## GIT
 
 http://rogerdudler.github.io/git-guide/
+
 https://marklodato.github.io/visual-git-guide/index-en.html
 
 ## Methods (JS)
@@ -36,8 +37,11 @@ https://jsblog.insiderattack.net/timers-immediates-and-process-nexttick-nodejs-e
 ## Promisses (JS)
 
 https://medium.com/quick-code/javascript-promises-in-twenty-minutes-3aac5b65b887
+
 https://medium.freecodecamp.org/promises-in-javascript-explained-277b98850de
+
 https://itnext.io/javascript-promises-with-node-js-e8ca827e0ea3
+
 https://gist.github.com/domenic/3889970
 
 ## Prototypal Inheritance
@@ -51,6 +55,7 @@ https://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html
 ## Javascript
 
 https://github.com/getify/You-Dont-Know-JS
+
 https://javascript.info
 
 ## Spread Operator (JS)
@@ -64,4 +69,5 @@ http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-
 ## React
 
 https://medium.com/@trekinbami/using-environment-variables-in-react-6b0a99d83cf5
+
 https://frontarm.com/james-k-nelson/passing-data-props-children/
