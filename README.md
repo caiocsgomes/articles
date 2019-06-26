@@ -60,3 +60,8 @@ https://codeburst.io/a-simple-guide-to-destructuring-and-es6-spread-operator-e02
 ## This (JS)
 
 http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it
+
+## React
+
+https://medium.com/@trekinbami/using-environment-variables-in-react-6b0a99d83cf5
+https://frontarm.com/james-k-nelson/passing-data-props-children/
