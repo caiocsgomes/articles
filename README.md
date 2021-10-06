@@ -1,6 +1,6 @@
 # MustRead
 
-Couple of good resources for several subjects regarding software
+Couple of good resources for several subjects regarding software that I want to save
 
 ## Flexbox
 
@@ -71,3 +71,11 @@ http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-
 https://medium.com/@trekinbami/using-environment-variables-in-react-6b0a99d83cf5
 
 https://frontarm.com/james-k-nelson/passing-data-props-children/
+
+## UTF-8
+
+https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
+
+## Golang
+
+https://dave.cheney.net/
