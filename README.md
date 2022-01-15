@@ -2,6 +2,10 @@
 
 Couple of good resources for several subjects regarding software that I want to save
 
+## AWS:
+
+API Documentation (useful to find policy actions for services): https://docs.aws.amazon.com/index.html
+
 ## Flexbox
 
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background
