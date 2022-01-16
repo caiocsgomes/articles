@@ -6,6 +6,8 @@ Couple of good resources for several subjects regarding software that I want to 
 
 API Documentation (useful to find policy actions for services): https://docs.aws.amazon.com/index.html
 
+List of AWS Service principals: https://gist.github.com/shortjared/4c1e3fe52bdfa47522cfe5b41e5d6f22
+
 ## Flexbox
 
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background
