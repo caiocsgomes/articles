@@ -89,3 +89,7 @@ https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-de
 ## Golang
 
 https://dave.cheney.net/
+
+##OpenApi
+
+https://swagger.io/docs/specification/about/
