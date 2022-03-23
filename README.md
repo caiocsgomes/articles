@@ -90,6 +90,10 @@ https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-de
 
 https://dave.cheney.net/
 
-##OpenApi
+## OpenApi
 
 https://swagger.io/docs/specification/about/
+
+## API Gateway (AWS)
+
+https://www.alexdebrie.com/posts/api-gateway-elements
