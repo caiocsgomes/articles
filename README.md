@@ -97,3 +97,9 @@ https://swagger.io/docs/specification/about/
 ## API Gateway (AWS)
 
 https://www.alexdebrie.com/posts/api-gateway-elements
+
+## Logging in python
+
+https://www.toptal.com/python/in-depth-python-logging
+
+https://bubtaylor.com/stop-using-the-root-logger-in-python-1183bd89f4dd
