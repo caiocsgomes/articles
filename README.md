@@ -90,6 +90,14 @@ https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-de
 
 https://dave.cheney.net/
 
-##OpenApi
+## OpenApi
 
 https://swagger.io/docs/specification/about/
+
+## Flask
+
+### Context
+
+https://testdriven.io/blog/flask-contexts/
+
+https://testdriven.io/blog/flask-contexts-advanced/
