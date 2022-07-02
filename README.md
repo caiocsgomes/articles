@@ -8,6 +8,10 @@ API Documentation (useful to find policy actions for services): https://docs.aws
 
 List of AWS Service principals: https://gist.github.com/shortjared/4c1e3fe52bdfa47522cfe5b41e5d6f22
 
+## ECR
+
+List of images: https://gallery.ecr.aws/
+
 ## Linux
 
 https://linuxjourney.com/
@@ -101,3 +105,14 @@ https://swagger.io/docs/specification/about/
 https://testdriven.io/blog/flask-contexts/
 
 https://testdriven.io/blog/flask-contexts-advanced/
+
+## API Gateway (AWS)
+
+https://www.alexdebrie.com/posts/api-gateway-elements
+
+## Logging in python
+
+https://www.toptal.com/python/in-depth-python-logging
+
+https://bubtaylor.com/stop-using-the-root-logger-in-python-1183bd89f4dd
+
