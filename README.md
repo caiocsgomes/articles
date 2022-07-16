@@ -116,3 +116,6 @@ https://www.toptal.com/python/in-depth-python-logging
 
 https://bubtaylor.com/stop-using-the-root-logger-in-python-1183bd89f4dd
 
+## ECS
+
+https://nathanpeck.com/speeding-up-amazon-ecs-container-deployments/
