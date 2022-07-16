@@ -119,3 +119,7 @@ https://bubtaylor.com/stop-using-the-root-logger-in-python-1183bd89f4dd
 ## ECS
 
 https://nathanpeck.com/speeding-up-amazon-ecs-container-deployments/
+
+## ALB
+
+https://blog.deleu.dev/one-load-balancer-to-rule-them-all/
