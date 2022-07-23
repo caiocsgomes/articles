@@ -8,6 +8,10 @@ API Documentation (useful to find policy actions for services): https://docs.aws
 
 List of AWS Service principals: https://gist.github.com/shortjared/4c1e3fe52bdfa47522cfe5b41e5d6f22
 
+### Serverless
+
+https://serverlessland.com/patterns
+
 ## ECR
 
 List of images: https://gallery.ecr.aws/
