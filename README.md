@@ -127,3 +127,7 @@ https://nathanpeck.com/speeding-up-amazon-ecs-container-deployments/
 ## ALB
 
 https://blog.deleu.dev/one-load-balancer-to-rule-them-all/
+
+## Subnet Calculator
+
+https://www.site24x7.com/tools/ipv4-subnetcalculator.html
