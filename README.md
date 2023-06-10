@@ -131,3 +131,7 @@ https://blog.deleu.dev/one-load-balancer-to-rule-them-all/
 ## Subnet Calculator
 
 https://www.site24x7.com/tools/ipv4-subnetcalculator.html
+
+## Github
+
+https://gist.github.com/mcroach/811c8308f4bd78570918844258841942
