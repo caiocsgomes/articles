@@ -42,6 +42,8 @@ http://rogerdudler.github.io/git-guide/
 
 https://marklodato.github.io/visual-git-guide/index-en.html
 
+https://www.freecodecamp.org/news/how-to-handle-multiple-git-configurations-in-one-machine/
+
 ## Methods (JS)
 
 https://codeburst.io/array-methods-explained-filter-vs-map-vs-reduce-vs-foreach-ea3127c6d319
