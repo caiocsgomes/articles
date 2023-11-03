@@ -28,10 +28,6 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background
 
 http://codeguide.co/#html
 
-## Environmental variables (NODE)
-
-https://codeburst.io/how-to-easily-set-up-node-environment-variables-in-your-js-application-d06740f9b9bd
-
 ## Express (NODE)
 
 https://medium.com/@adamzerner/how-bodyparser-works-247897a93b90
