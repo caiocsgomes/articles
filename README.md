@@ -40,10 +40,6 @@ https://marklodato.github.io/visual-git-guide/index-en.html
 
 https://www.freecodecamp.org/news/how-to-handle-multiple-git-configurations-in-one-machine/
 
-## Methods (JS)
-
-https://codeburst.io/array-methods-explained-filter-vs-map-vs-reduce-vs-foreach-ea3127c6d319
-
 ## Node.js
 
 https://jsblog.insiderattack.net/event-loop-and-the-big-picture-nodejs-event-loop-part-1-1cb67a182810
