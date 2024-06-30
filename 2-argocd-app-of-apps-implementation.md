@@ -1,7 +1,7 @@
-# An implementation of the App of Apps pattern using ArgoCD (NOT FINISHED)
+# An implementation of the App of Apps pattern using ArgoCD
 
 This arcticle describes a practical implementation of the app of apps pattern using argocd with a real-world example using helm templating.
-This pattern in argocd allows to create a single application (let's call it *app-of-apps* for convenience) that contains that contain all the other applications that we want to deploy in the cluster.
+This pattern in argocd allows to create a single application (let's call it *app-of-apps* for convenience) that contains all the other applications that we want to deploy in the cluster.
 This is specially useful when we want to bootstrap a cluster and want argocd to take care of deploying all the applications in the cluster.
 In this scenario we only deploy the *app-of-apps* application, and, as this application contains all the other applications as child apps, argocd will take care of deploying yhem.
 
@@ -12,14 +12,15 @@ Being specific now, things like *aws-load-balancer-controller*, *kube-prometheus
 As we don't want to deploy all these applications manually, we can use the app of apps pattern to deploy them all at once.
 
 Now that we have a general idea of purpose of the app of apps pattern, in this post we will try to make it easier using helm templating.
-Let's go over on how to use helm and then common manifests with argocd and then how to use it in the app of apps pattern automating the apps generation with helm.
+Let's go over on how to use helm charts and common manifests with argocd, and then how to use it in the app of apps pattern automating the argocd app generation with helm.
+
 In the first two parts I'll just go over the docs, so nothing new, but in the last part I'll show how to use helm to generate the app of apps project in an automated way.
 
 ## Deploying external helm charts with argocd
 Usually we want to deploy external applications using helm charts, for instance, if we want to deploy an operator we just want to specify the chart we want to use and the values.yaml.
 In argocd we can treat these applications as dependencies and create a helm project specifying the helm chart repository and the values.yaml.
 
-The argocd has a good example for this and we will use to explain this part: https://github.com/argoproj/argocd-example-apps/tree/master/helm-dependency.
+The argocd has a good example for this and we will use it to explain this part: https://github.com/argoproj/argocd-example-apps/tree/master/helm-dependency.
 
 So, we create a folder project with the following structure:
 
@@ -76,6 +77,7 @@ wordpress:
 ```
 
 So you take the regular values from the documentation but they need to be inside the chart name key. Like here we have the values inside the *wordpress* key because the chart name is *wordpress*.
+
 Having this structure you could create the application in argocd: 
 
 ```yaml
@@ -217,7 +219,7 @@ spec:
       - CreateNamespace=true
 ```
 
-This pretty much never change, as it is just creating the app pointing to the *kubernetes/app-of-apps* folder in my repository.
+This pretty much never changes, as it is just creating the app pointing to the *kubernetes/app-of-apps* folder in my repository.
 Then on the *kubernetes/app-of-apps* folder I have the following structure:
 
 ```yaml
@@ -263,7 +265,7 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-      - ServerSideApply=true #https://www.arthurkoziel.com/fixing-argocd-crd-too-long-error/, https://www.howtogeek.com/devops/what-is-kubernetes-server-side-apply-ssa/
+      - ServerSideApply=true
 ---
 {{- end }}
 ```
@@ -294,3 +296,4 @@ So I'll have these applications inside the *app-of-apps* application in argocd.
 
 The manifests or helm charts that I need to deploy are specified in the *kubernetes* folder as we saw in the previous examples.
 So, whenever I need to add a new app, I create it in the *kubernetes* folder and add it to the *app-of-apps* *values.yaml* file.
+This way I almost never need to change the *app-of-apps* application, I just need to add new applications to the *values.yaml* file.
