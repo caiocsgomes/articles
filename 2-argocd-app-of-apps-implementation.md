@@ -159,7 +159,7 @@ To deploy this structure we would create the argocd application like this:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-of-apps
+  name: applications
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -182,10 +182,115 @@ spec:
 
 Deploying this would create the *app-of-apps* that would contain all the applications defined in the *templates* folder.
 
-![argocd app of apps](images/app-of-apps.png) 
+![argocd app of apps](images/2-app-of-apps.png)
 
 This is a good solution, but it's not automated. Every time we need a new application we need to add it to the *templates* folder.
 Another point is that if you take a look in the *templates* folder, almost all the applications are the same, they just have different values.
 So, we could rely on helm templating to generate the applications in the *templates* folder automatically.
 
 This is the solution I like to use: https://github.com/caiocsgomes/aws-eks-cluster/tree/main/kubernetes
+
+This is my *app-of-apps* project:
+
+```yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-of-apps
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: argocd
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: kubernetes/app-of-apps
+    repoURL: https://github.com/caiocsgomes/aws-eks-cluster
+    targetRevision: HEAD
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+```
+
+This pretty much never change, as it is just creating the app pointing to the *kubernetes/app-of-apps* folder in my repository.
+Then on the *kubernetes/app-of-apps* folder I have the following structure:
+
+```yaml
+├── Chart.yaml
+├── templates
+│   ├── template-helm.yaml
+│   └── template-manifests.yaml
+└── values.yaml
+```
+
+The main difference here is I don't use the *templates* folder to store applications, I use it to store the helm templates that will generate the applications for me.
+As these templates are based on the *values.yaml* file I can add new applications just by adding new values to the file.
+
+As an example, this is my current template for helm (https://github.com/caiocsgomes/aws-eks-cluster/blob/main/kubernetes/app-of-apps/templates/template-helm.yaml):
+
+```yaml
+{{- range $chart := .Values.charts }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ $chart.name }}
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  annotations:
+    argocd.argoproj.io/sync-options: Prune=true
+    argocd.argoproj.io/sync-wave: "{{ $chart.sync_wave | default 0 | toString }}"
+spec:
+  project: default
+  source:
+    repoURL: {{ $.Values.github_repo }}
+    path: {{ $.Values.base_path }}/{{ $chart.name }}
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    server: {{ $.Values.destination.server }}
+    namespace: {{ $chart.name }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true #https://www.arthurkoziel.com/fixing-argocd-crd-too-long-error/, https://www.howtogeek.com/devops/what-is-kubernetes-server-side-apply-ssa/
+---
+{{- end }}
+```
+
+See that the application and the code used in the application is generated based on the *values.yaml* file.
+So in the values file I can just add new applications and they will be generated automatically.
+
+This is the current *values.yaml* file:
+
+```yaml
+github_repo: https://github.com/caiocsgomes/aws-eks-cluster
+base_path: kubernetes
+destination:
+  server: https://kubernetes.default.svc
+charts:
+- name: aws-load-balancer-controller
+  sync_wave: "-1"
+- name: gha-runner-scale-set-controller
+- name: external-secrets
+  sync_wave: "-1"
+manifests:
+- name: argocd
+```
+
+So I'll have these applications inside the *app-of-apps* application in argocd.
+
+![argocd app of apps](images/2-app-of-apps-2.png) 
+
+The manifests or helm charts that I need to deploy are specified in the *kubernetes* folder as we saw in the previous examples.
+So, whenever I need to add a new app, I create it in the *kubernetes* folder and add it to the *app-of-apps* *values.yaml* file.
